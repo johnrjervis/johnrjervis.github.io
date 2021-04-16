@@ -22,6 +22,7 @@ main {
 
 
 footer {
+	box-sizing: border-box;
 	color: black;
 	background-color: #64f664;
 	border-top: 5px solid darkgreen;
@@ -118,6 +119,7 @@ video {
 	width: 100%;
 }
 
+
 h2 {
 	padding: 10px 20px 5px;
 }
@@ -156,4 +158,12 @@ article:last-child {
 .video-with-splash {
 	border: 3px solid black;
 	margin-bottom: 20px;
+}
+
+/* Small screen formatting */
+
+@media (max-width: 400px) {
+	header, footer {
+		width: 400px;
+	}
 }
