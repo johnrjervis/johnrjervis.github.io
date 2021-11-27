@@ -1,4 +1,4 @@
-/* Fonts */
+/* ---------------- Fonts ---------------- */
 
 @font-face {
     font-family: 'tillanaregular';
@@ -16,7 +16,7 @@
     font-style: normal;
 }
 
-/* Main structural elements */
+/* ---------------- Main structural elements ---------------- */
 
 * {
   box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 }
 
 
-/* General formatting for body elements */
+/* ---------------- General formatting for body elements ---------------- */
 
 *::selection {
   background-color: darkgreen;
@@ -96,7 +96,7 @@ a img {
   height: 1.5rem;
 }
 
-/* Formatting for combined title-navigation bar and footer elements */
+/* ---------------- Formatting for combined title-navigation bar and footer elements ---------------- */
 
 header,
 nav,
@@ -164,15 +164,15 @@ footer {
   font-size: 1.8rem;
 }
 
-/* Responsive formatting - medium-sized screens */
+/* ---------------- Responsive formatting - medium-sized screens ---------------- */
 
 @media (min-width: 300px) {
-  nav li:nth-of-type(odd) {
+  .navlinks > li:nth-of-type(odd) {
     width: 50%;
     float: left;
   }
 
-  nav li:nth-of-type(even) {
+  .navlinks > li:nth-of-type(even) {
     width: 50%;
     float: right;
   }
@@ -180,10 +180,9 @@ footer {
   nav a {
     width: 98%;
   }
-
 }
 
-/* Responsive formatting - widescreen */
+/* ---------------- Responsive formatting - widescreen ---------------- */
 
 @media (min-width: 600px) {
   nav ul {
@@ -194,11 +193,7 @@ footer {
     top: 5px;
   }
 
-  nav li {
-    width: 20%;
-  }
-
-  nav a {
+  .navlinks li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +203,7 @@ footer {
     border-radius: 20px 20px 0px 0px;    
   }
 
-  nav a:active {
+  .navlinks > li > a:active {
     border-bottom: 5px solid white;
   }
 
@@ -218,7 +213,7 @@ footer {
     border-bottom: 5px solid white;
   }
 
-  .selected a:hover {
+  .selected > a:hover {
     color: darkgreen;
     background-color: white;
   }
