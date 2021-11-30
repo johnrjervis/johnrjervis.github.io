@@ -88,10 +88,10 @@ a {
 }
 
 a:visited {
-  color: lightgreen;
+  color: black;
 }
 
-a img {
+dd img {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -114,15 +114,19 @@ h1 {
   font-family: 'tillanaregular', 'times new roman', serif;
 }
 
-nav ul {
+nav > ul {
   width: 75%;
-  list-style-type: none;
   margin: 1rem auto 0;
+}
+
+nav ul {
+  list-style-type: none;
   padding: 0;
 }
 
 nav li {
   text-align: center;
+  height: 50px;
 }
 
 nav a {
@@ -151,10 +155,9 @@ nav a:active {
   background-color: white;
 }
 
-.selected a {
+.selected > a {
   background-color: white;
 }
-
 
 footer {
   width: 100%;
@@ -162,6 +165,18 @@ footer {
   border-top: 5px solid darkgreen;
   padding: 1rem 2rem;
   font-size: 1.8rem;
+}
+
+/* ---------------- Flyout menus ---------------- */
+
+.flyout {
+  position: relative;
+  top: -5px;
+  visibility: hidden;
+}
+
+.flyout ul {
+  flex-direction: column;
 }
 
 /* ---------------- Responsive formatting - medium-sized screens ---------------- */
@@ -204,17 +219,29 @@ footer {
   }
 
   .navlinks > li > a:active {
-    border-bottom: 5px solid white;
+    border-bottom: none;
+    padding-bottom: 5px;
   }
 
-  .selected a {
+  .selected > a {
     color: darkgreen;
     background-color: white;
-    border-bottom: 5px solid white;
+    border-bottom: none;
+    padding-bottom: 5px;
   }
 
   .selected > a:hover {
     color: darkgreen;
     background-color: white;
   }
+
+  .navlinks .flyout a {
+    width: 100%;
+    border-top: none;
+    border-radius: 0px;
+  }
+
+  .flyout ul li:last-child a {
+    border-radius: 0px 0px 15px 15px;
+  } 
 }
